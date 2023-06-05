@@ -17,6 +17,7 @@ def postInput():
     insertSentence = request.get_json()
     input =insertSentence['Sentence']
     result = rf.predict(input)
+    print(result)
     return jsonify({'return': str(result)})
 
 

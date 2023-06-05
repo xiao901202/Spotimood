@@ -13,6 +13,8 @@ def predict(sentence):
     words = ws([sentence])
     content = '|'.join(words[0])
     sentences.append(content)
+    print(sentences)
     X = vector.transform(sentences)
     pred=model.predict(X)
+    print(pred)
     return pred[0]
